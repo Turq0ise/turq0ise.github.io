@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background-color: #222831;
+  overflow-y: hidden;
+}
+
+:is(h1, h2, p, li, button) {
+  color: #C9C9C9;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  margin: Min(5%, 10rem) Min(18%, 30rem);
+}
+
+#header #header-avatar img {
+  border: 3px solid #30475E;
+  border-radius: 50%;
+  height: 33vh;
+}
+
+#header #header-title {
+  position: relative;
+  width: 100%;
+}
+
+#header #header-title #main-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#header #header-title #main-text h1 {
+  font-weight: 600;
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+#header #header-title #main-text p {
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+#cards {
+  margin: 0 Min(15%, 20rem) 5rem Min(15%, 20rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cards .repo-cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 0;
+  border-bottom: #30475E solid 3px;
+}
+
+#cards .repo-cards .card-sides {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: calc(3rem - 2rem);
+}
+
+#cards .repo-cards a {
+  text-decoration: none;
+}
+
+#cards .repo-cards h1 {
+  font-size: clamp(1.3rem, 3vw, 2.3rem);
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+#cards .repo-cards :is(#left) h1:hover {
+  color: #BBE1FA;
+}
+
+#cards .repo-cards :is(p, button) {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 300;
+}
+
+#cards .repo-cards li {
+  list-style: none;
+  display: inline;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+#cards .repo-cards li span {
+  font-style: italic;
+}
+
+#cards .repo-cards li:first-child {
+  padding-left: 0;
+}
+
+#cards .repo-cards button {
+  width: 70%;
+  height: calc(3rem + 0.8rem);
+  border: none;
+  border-radius: 15px;
+  background-color: #0F4C75;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+#cards .repo-cards button:hover {
+  border: #30475E solid 3px;
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+#cards .repo-cards:first-child {
+  border-top: #30475E solid 3px;
+}
+
+#loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+}
+
+#loader h1 {
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hide {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
