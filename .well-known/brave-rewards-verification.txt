@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: turq0ise.github.io
+Token: e7d3cefe5a947f0649bd9b1a91fa44f341256044f1ba1c2854d650fce858f45c

@@ -26,7 +26,6 @@ $default-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
 
 body {
     background-color: $body-clr;
-    overflow-y: hidden;
 }
 
 :is(h1, h2, p, li, button) {
