@@ -8,7 +8,6 @@ html {
 
 body {
   background-color: #222831;
-  overflow-y: hidden;
 }
 
 :is(h1, h2, p, li, button) {
