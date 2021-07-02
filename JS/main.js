@@ -8,7 +8,7 @@ var repoLanguagesValues = []
 var languageUrls = []
 
 async function fetchRepo() {
-    var fetchJson = await fetch("https://api.github.com/users/Turq0ise/repos?")
+    var fetchJson = await fetch("https://api.github.com/users/turq0ise/repos?")
     var fetchRepoData = await fetchJson.json()
 
     for(i = 0; i < fetchRepoData.length; i++) {
@@ -29,14 +29,15 @@ async function fetchRepo() {
 
     printFunction()
 }
-fetchRepo()
 
 function printFunction() {
+    activateLoader()
+    
     getHeader.innerHTML += `<div id="header-avatar"><img src="${repoOwnerAvatar}"></div><div id="header-title"><div id="main-text"><h1>${repoOwner}</h1><p>Github Repositories:</p></div></div>`
     for(i = 0; i < repoNames.length; i++) { 
         getCards.innerHTML += `<div class="repo-cards" id="repo-card-${i}"></div>`
-        document.getElementById(`repo-card-${i}`).innerHTML += `<div class="card-sides" id="left"><a href="https://github.com/Turq0ise/${repoNames[i]}"><h1>${repoNames[i]}</h1></a><p>${repoDescription[i]}</p></div>`
-        document.getElementById(`repo-card-${i}`).innerHTML += `<div class="card-sides" id="right"><h1>Languages:</h1><div id="language-list-${i}"></li></div><a href="https://turq0ise.github.io/${repoNames[i]}/"><button>Visit Webpage</button></a></div>`
+        document.getElementById(`repo-card-${i}`).innerHTML += `<div class="card-sides" id="left"><a href="https://github.com/${repoOwner}/${repoNames[i]}"><h1>${repoNames[i]}</h1></a><p>${repoDescription[i]}</p></div>`
+        document.getElementById(`repo-card-${i}`).innerHTML += `<div class="card-sides" id="right"><h1>Languages:</h1><div id="language-list-${i}"></li></div><a href="https://${repoOwner}.github.io/${repoNames[i]}/"><button>Visit Webpage</button></a></div>`
         for(x = 0; x < repoLanguagesKeys[i].length; x++) {
             var total = 0
             for(y = 0; y < repoLanguagesValues[i].length; y++) {
@@ -45,6 +46,11 @@ function printFunction() {
             document.getElementById(`language-list-${i}`).innerHTML += `<li>${repoLanguagesKeys[i][x]}: <span>${round(repoLanguagesValues[i][x]/total*100, 1)}%</span>`
         }
     }
+}
+
+function activateLoader() {
+    const getLoader = document.getElementById("loader")
+    getLoader.classList.add("hide")
 }
 
 function round(value, precision) {

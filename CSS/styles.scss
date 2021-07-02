@@ -32,6 +32,30 @@ body {
     color: $text-clr;
 }
 
+#loader {
+    background-color: $body-clr;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hide {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 #header {
     display: flex;
     gap: $default-gap;
