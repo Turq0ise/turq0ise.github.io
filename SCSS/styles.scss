@@ -1,0 +1,278 @@
+// Inconsolata: ital 200, reg 500, 600, 700
+// SCP: ital 200, 300, reg 400
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;500;600;700&family=Source+Sans+Pro:ital,wght@0,400;1,200;1,300&display=swap');
+
+:root {
+    --body-clr: #212121;
+    --main-font-clr: #EEFDFF;
+    --secondary-font-clr: #464B4B;
+    --light-accent-clr: #EEFFFF;
+    --dark-accent-clr: #40e0d0;
+
+    --main-font-family: "Inconsolata";
+    --secondary-font-family: "Source Sans Pro";
+
+    --header1-font-size: clamp(3.188rem, 4.125vw, 4rem);
+    --header2-font-size: clamp(2.625rem, 3.000vw, 3.375rem);
+    --header3-font-size: clamp(2.138rem, 2.250vw , 2.813rem);;
+    --general-font-size: clamp(1.500rem, 0.600vw, 1.688rem);
+
+    --inline-container: clamp(.5rem, 8vw, 15rem);
+    // --additional-container: clamp(0px, 10vw, 15rem);
+}
+
+*,
+*:before,
+*:after,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    line-height: 1.1;
+}
+
+*:not(i) {
+    font-family: var(--main-font-family);
+    color: var(--main-font-clr);
+}
+
+body {
+    background-color: var(--body-clr);
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    border-bottom: var(--dark-accent-clr) solid 2px;
+    padding: 1.5rem var(--inline-container);
+    background-color: inherit;
+
+    .logo {
+        cursor: pointer;
+
+        img {
+            height: 2.3rem;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                font-size: var(--general-font-size);
+                font-weight: 600;
+            }
+
+            a:hover {
+                color: var(--dark-accent-clr);
+            }
+        }
+    }
+}
+
+.landing {
+    height: 85vh; //temporary (to be replaced with more padding)
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 var(--inline-container);
+    
+    h1 {
+        font-size: var(--header1-font-size);
+        font-weight: 700;
+    }
+
+    .CTAs {
+        a {
+            padding-inline: 0.5rem;
+            appearance: button;
+            -moz-appearance: button;
+            
+            button {
+                height: 3.3rem;
+                width: 12rem;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                border: var(--dark-accent-clr) solid 3px;
+                border-radius: 10px;
+                font-size: var(--general-font-size);
+                font-weight: 700;
+            }
+        
+            button:hover {
+                background-color: var(--dark-accent-clr);
+                color: var(--body-clr);
+            }
+        }
+    }
+}
+
+.techs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 var(--inline-container);
+    width: 100%;
+    background-color: var(--main-font-clr);
+
+    .tech-icons {
+        padding-block: 1.7rem;
+
+        i {
+            font-size: var(--header2-font-size);
+            color: var(--body-clr);
+            padding-inline: 0.7rem;
+        }
+    }
+}
+
+.projects {
+    padding: 5rem calc(var(--inline-container) + 10rem);
+    width: 100%;
+
+    h1 {font-size: var(--header1-font-size);}
+    h2 {font-size: var(--header3-font-size);}
+    p, li {font-size: var(--general-font-size);}
+
+    .project {
+        padding-block: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        
+        .left,
+        .right {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .left {
+            img {
+                width: clamp(20rem, 30vw, 47rem);
+            }
+
+            .CTAs {
+                padding-block: 1.2rem;
+
+                a {
+                    appearance: button;
+                    -moz-appearance: button;
+                    
+                    button {
+                        height: 3.3rem;
+                        width: 12rem;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: none;
+                        border: var(--dark-accent-clr) solid 3px;
+                        border-radius: 10px;
+                        font-size: var(--general-font-size);
+                        font-weight: 700;
+                    }
+                
+                    button:hover {
+                        background-color: var(--dark-accent-clr);
+                        color: var(--body-clr);
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: Min(100%, 60rem);
+            .message {
+                padding-block-end: 1.2rem;
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    margin: 5rem var(--inline-container);
+    // margin: 2rem calc(var(--inline-container) + 10rem - 3rem);
+    
+    * {color: var(--body-clr);}
+    h1 {font-size: var(--header1-font-size);}
+    h2 {font-size: var(--header3-font-size);}
+    p, label, input, textarea, button {font-size: var(--general-font-size);}
+    
+    .sub-container {
+        background-color: var(--light-accent-clr);
+        padding: 3rem;
+        border-radius: 10px;
+        
+        label {
+            font-weight: 600;
+        }
+        
+        form {
+            width: clamp(15rem, 43vw, 65rem); //double check later
+            .form-questions {
+                padding-block: 1.1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                input,
+                textarea {
+                    background-color: var(--body-clr);
+                    color: var(--light-accent-clr);
+                    border: none;
+                    border-radius: 5px;
+                    padding: .3rem;
+                }
+    
+                #messageInput {
+                    resize: vertical;
+                }
+            }
+            
+            button {
+                height: 3.3rem;
+                width: 12rem;
+                background-color: var(--body-clr);
+                border: none;
+                // border: var(--dark-accent-clr) solid 3px;
+                border-radius: 10px;
+                font-size: var(--general-font-size);
+                font-weight: 700;
+                color: var(--light-accent-clr);
+            }
+        
+            button:hover {
+                background-color: var(--dark-accent-clr);
+                color: var(--body-clr);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1520px)  {
+    .projects {
+        padding: 5rem var(--inline-container);
+
+        .project {
+            flex-direction: column;
+
+            // .left {
+            //     // width: ;
+            // }
+        }
+    }
+}

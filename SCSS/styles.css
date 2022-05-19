@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;500;600;700&family=Source+Sans+Pro:ital,wght@0,400;1,200;1,300&display=swap");
+:root {
+  --body-clr: #212121;
+  --main-font-clr: #EEFDFF;
+  --secondary-font-clr: #464B4B;
+  --light-accent-clr: #EEFFFF;
+  --dark-accent-clr: #40e0d0;
+  --main-font-family: "Inconsolata";
+  --secondary-font-family: "Source Sans Pro";
+  --header1-font-size: clamp(3.188rem, 4.125vw, 4rem);
+  --header2-font-size: clamp(2.625rem, 3.000vw, 3.375rem);
+  --header3-font-size: clamp(2.138rem, 2.250vw , 2.813rem);
+  --general-font-size: clamp(1.500rem, 0.600vw, 1.688rem);
+  --inline-container: clamp(.5rem, 8vw, 15rem);
+}
+
+*,
+*:before,
+*:after,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  line-height: 1.1;
+}
+
+*:not(i) {
+  font-family: var(--main-font-family);
+  color: var(--main-font-clr);
+}
+
+body {
+  background-color: var(--body-clr);
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  border-bottom: var(--dark-accent-clr) solid 2px;
+  padding: 1.5rem var(--inline-container);
+  background-color: inherit;
+}
+.nav-bar .logo {
+  cursor: pointer;
+}
+.nav-bar .logo img {
+  height: 2.3rem;
+}
+.nav-bar .navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.nav-bar .navigation li {
+  list-style: none;
+}
+.nav-bar .navigation li a {
+  text-decoration: none;
+  font-size: var(--general-font-size);
+  font-weight: 600;
+}
+.nav-bar .navigation li a:hover {
+  color: var(--dark-accent-clr);
+}
+
+.landing {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 var(--inline-container);
+}
+.landing h1 {
+  font-size: var(--header1-font-size);
+  font-weight: 700;
+}
+.landing .CTAs a {
+  padding-inline: 0.5rem;
+  -webkit-appearance: button;
+          appearance: button;
+  -moz-appearance: button;
+}
+.landing .CTAs a button {
+  height: 3.3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border: var(--dark-accent-clr) solid 3px;
+  border-radius: 10px;
+  font-size: var(--general-font-size);
+  font-weight: 700;
+}
+.landing .CTAs a button:hover {
+  background-color: var(--dark-accent-clr);
+  color: var(--body-clr);
+}
+
+.techs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 var(--inline-container);
+  width: 100%;
+  background-color: var(--main-font-clr);
+}
+.techs .tech-icons {
+  padding-block: 1.7rem;
+}
+.techs .tech-icons i {
+  font-size: var(--header2-font-size);
+  color: var(--body-clr);
+  padding-inline: 0.7rem;
+}
+
+.projects {
+  padding: 5rem calc(var(--inline-container) + 10rem);
+  width: 100%;
+}
+.projects h1 {
+  font-size: var(--header1-font-size);
+}
+.projects h2 {
+  font-size: var(--header3-font-size);
+}
+.projects p, .projects li {
+  font-size: var(--general-font-size);
+}
+.projects .project {
+  padding-block: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+.projects .project .left,
+.projects .project .right {
+  display: flex;
+  flex-direction: column;
+}
+.projects .project .left img {
+  width: clamp(20rem, 30vw, 47rem);
+}
+.projects .project .left .CTAs {
+  padding-block: 1.2rem;
+}
+.projects .project .left .CTAs a {
+  -webkit-appearance: button;
+          appearance: button;
+  -moz-appearance: button;
+}
+.projects .project .left .CTAs a button {
+  height: 3.3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border: var(--dark-accent-clr) solid 3px;
+  border-radius: 10px;
+  font-size: var(--general-font-size);
+  font-weight: 700;
+}
+.projects .project .left .CTAs a button:hover {
+  background-color: var(--dark-accent-clr);
+  color: var(--body-clr);
+}
+.projects .project .right {
+  width: min(100%, 60rem);
+}
+.projects .project .right .message {
+  -webkit-padding-after: 1.2rem;
+          padding-block-end: 1.2rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin: 5rem var(--inline-container);
+}
+.contact * {
+  color: var(--body-clr);
+}
+.contact h1 {
+  font-size: var(--header1-font-size);
+}
+.contact h2 {
+  font-size: var(--header3-font-size);
+}
+.contact p, .contact label, .contact input, .contact textarea, .contact button {
+  font-size: var(--general-font-size);
+}
+.contact .sub-container {
+  background-color: var(--light-accent-clr);
+  padding: 3rem;
+  border-radius: 10px;
+}
+.contact .sub-container label {
+  font-weight: 600;
+}
+.contact .sub-container form {
+  width: clamp(15rem, 43vw, 65rem);
+}
+.contact .sub-container form .form-questions {
+  padding-block: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact .sub-container form .form-questions input,
+.contact .sub-container form .form-questions textarea {
+  background-color: var(--body-clr);
+  color: var(--light-accent-clr);
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+.contact .sub-container form .form-questions #messageInput {
+  resize: vertical;
+}
+.contact .sub-container form button {
+  height: 3.3rem;
+  width: 12rem;
+  background-color: var(--body-clr);
+  border: none;
+  border-radius: 10px;
+  font-size: var(--general-font-size);
+  font-weight: 700;
+  color: var(--light-accent-clr);
+}
+.contact .sub-container form button:hover {
+  background-color: var(--dark-accent-clr);
+  color: var(--body-clr);
+}
+
+@media only screen and (max-width: 1520px) {
+  .projects {
+    padding: 5rem var(--inline-container);
+  }
+  .projects .project {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styles.css.map */

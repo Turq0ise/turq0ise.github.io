@@ -4,16 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <title>turq0ise.github.io</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="MEDIA/FAVICON/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="MEDIA/FAVICON/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="MEDIA/FAVICON/favicon-16x16.png">
+    <link rel="manifest" href="MEDIA/FAVICON/site.webmanifest">
+    <link rel="stylesheet" href="SCSS/styles.css">
+    <script src="https://kit.fontawesome.com/e00005890a.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
 </head>
-<body onload="fetchRepo()">
-    <div id="loader">
-        <h1>Please wait while the page is loading...</h1>
+<body onload="fetchGithub()">
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="#landing">
+                <img src="MEDIA/IMG/LOGO/Small Logo.svg" alt="</T>">
+            </a>
+        </div>
+        <div class="navigation">
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </div>
     </div>
 
-    <div id="header"></div>
-    <div id="cards"></div>
-    <script src="JS/main.js"></script>
+    <div class="landing" id="landing">
+        <h1>Making ideas into digital reality.</h1>
+        <div class="CTAs">
+            <a href="#projects">
+                <button>Projects</button>
+            </a>
+            <a href="#contact">
+                <button>Contact Me</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="techs" id="techs">
+        <div class="tech-icons">
+            <i class="fa-brands fa-github-square"></i>
+            <i class="fa-brands fa-git-alt"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-sass"></i>
+            <i class="fa-brands fa-js-square"></i>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <div class="project">
+            <h1>Projects</h1>
+        </div>
+        <div class="project">
+            <div class="left">
+                <img src="MEDIA/IMG/PROJECTS/TimeWorkshopV2/live.png" class="card" loading="lazy">
+                <div class="CTAs">
+                    <a href="https://turq0ise.github.io/TimeWorkshopV2" target="_blank">
+                        <button><i class="fa-solid fa-eye"></i> View Live</button>
+                    </a>
+                    <a href="https://github.com/turq0ise/TimeWorkshopV2" target="_blank">
+                        <button><i class="fa-solid fa-code"></i> View Code</button>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="message">
+                    <h2>TimeWorkshopV2</h2>
+                    <p>This is a grade 9 school project for a workshop we held regarding time management.</p>
+                </div>
+                <div class="message">
+                    <h2>Key Takeaways:</h2>
+                    <ul>
+                        <li>Implementing a loading screen</li>
+                        <li>Using Intersection Observer</li>
+                        <li>Having manual buttons for an automatic slider</li>
+                        <li>Using Chart.js</li>
+                        <li>Data Organization: Viewing all of the responses per question at the same time or viewing the responses of each participant separately.</li>
+                        <li>Using Google forms with my own UI</li>
+                        <li>Using SVGs for background elements</li>
+                    </ul>
+                </div>
+                <div class="message">
+                    <h2>Languages:</h2>
+                    <div id="TimeWorkshopV2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="left">
+                <img src="MEDIA/IMG/PROJECTS/rSlashWallpaper/live.png" class="card" loading="lazy">
+                <div class="CTAs">
+                    <a href="https://turq0ise.github.io/rSlashWallpaper" target="_blank">
+                        <button><i class="fa-solid fa-eye"></i> View Live</button>
+                    </a>
+                    <a href="https://github.com/turq0ise/rSlashWallpaper" target="_blank">
+                        <button><i class="fa-solid fa-code"></i> View Code</button>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="message">
+                    <h2>rSlashWallpaper</h2>
+                    <p>A gallery of mostly desktop wallpapers based on the posts of users in the r/Wallpaper sub-reddit.</p>
+                </div>
+                <div class="message">
+                    <h2>Key Takeaways:</h2>
+                    <ul>
+                        <li>Handling API requests using the Fetch API</li>
+                        <li>Adding Lazy Loading</li>
+                        <li>Dark mode/Light mode switcher</li>
+                    </ul>
+                </div>    
+                <div class="message">
+                    <h2>Languages:</h2>
+                    <div id="rSlashWallpaper"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="left">
+                <img src="MEDIA/IMG/PROJECTS/GroupFivePortfolio/live.png" class="card" loading="lazy">
+                <div class="CTAs">
+                    <a href="https://turq0ise.github.io/GroupFivePortfolio" target="_blank">
+                        <button><i class="fa-solid fa-eye"></i> View Live</button>
+                    </a>
+                    <a href="https://github.com/turq0ise/GroupFivePortfolio" target="_blank">
+                        <button><i class="fa-solid fa-code"></i> View Code</button>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="message">
+                    <h2>GroupFivePortfolio</h2>
+                    <p>This is a grade 10 school project to document our activities for a specific subject.</p>
+                </div>
+                <div class="message">
+                    <h2>Key Takeaways:</h2>
+                    <ul>
+                        <li>Using breadcrumbs for better navigation</li>
+                        <li>Adding a back to top button</li>
+                        <li>Using gradients in borders</li>
+                    </ul>
+                </div>
+                <div class="message">
+                    <h2>Languages:</h2>
+                    <div id="GroupFivePortfolio"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact-form">
+        <div class="sub-container">
+            <h1>Contact Me</h1>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdt4FKoa6oQcxor2s9fdEnykkU07MKwgHmvCv4LBzwVbech1g/formResponse" method="POST">
+                <div class="form-questions">
+                    <label for="nameInput">Name:</label>
+                    <input type="text" name="entry.246254442" id="nameInput">
+                </div>
+                <div class="form-questions">
+                    <label for="emailInput">E-Mail:</label>
+                    <input type="email" name="entry.944221603" id="emailInput">
+                </div>
+                <div class="form-questions">
+                    <label for="messageInput">Message:</label>
+                    <textarea type="text" name="entry.2031891165" id="messageInput"></textarea>
+                </div>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
 </body>
 </html>
