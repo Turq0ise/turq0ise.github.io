@@ -43,6 +43,32 @@ function round(value, precision) {
     return Math.round(value * multiplier) / multiplier;
 }
 
+const header = document.getElementById("header")
+const getFullSizeNav = document.getElementById("full-size-nav")
+const marginTopValue = `${header.clientHeight + 2}px`
+
+function fullSizeNav() {
+    if (getFullSizeNav.style.display == "none") {
+        getFullSizeNav.style.display = "flex"
+        document.body.style.overflow = "hidden"
+    } else if (getFullSizeNav.style.display == "flex") {
+        getFullSizeNav.style.display = "none"
+        document.body.style.overflow = "auto"
+    }
+}
+
+function fullSizeNavMargin() {
+    if(window.innerWidth > 1280) {
+        return
+    } else {
+        getFullSizeNav.style.marginTop = marginTopValue
+    }
+}
+
+window.addEventListener("resize", () => {
+    fullSizeNavMargin()
+})
+
 const contactForm = document.getElementById("contact-form")
 
 contactForm.addEventListener("submit", function(e) {

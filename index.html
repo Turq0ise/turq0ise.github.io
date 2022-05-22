@@ -12,8 +12,8 @@
     <script src="https://kit.fontawesome.com/e00005890a.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
-<body onload="fetchGithub()">
-    <div class="nav-bar">
+<body onload="fetchGithub(), fullSizeNavMargin()">
+    <header class="nav-bar" id="header">
         <div class="logo">
             <a href="#landing">
                 <img src="MEDIA/IMG/LOGO/Small Logo.svg" alt="</T>">
@@ -23,6 +23,17 @@
             <li><a href="#landing">Home</a></li>
             <li><a href="#projects">Projects</a></li>
         </div>
+
+        <div class="navigation" id="mobile">
+            <li><i class="fa-solid fa-bars" onclick="fullSizeNav()"></i></li>
+        </div>
+    </header>
+
+    <div class="full-size-nav" id="full-size-nav" style="display: none;">
+        <ul>
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
     </div>
 
     <div class="landing" id="landing">
@@ -54,7 +65,7 @@
         </div>
         <div class="project">
             <div class="left">
-                <img src="MEDIA/IMG/PROJECTS/TimeWorkshopV2/live.png" class="card" loading="lazy">
+                <img src="MEDIA/IMG/PROJECTS/TimeWorkshopV2.png" class="card" loading="lazy">
                 <div class="CTAs">
                     <a href="https://turq0ise.github.io/TimeWorkshopV2" target="_blank">
                         <button><i class="fa-solid fa-eye"></i> View Live</button>
@@ -70,7 +81,7 @@
                     <p>This is a grade 9 school project for a workshop we held regarding time management.</p>
                 </div>
                 <div class="message">
-                    <h2>Key Takeaways:</h2>
+                    <h3>Key Takeaways:</h3>
                     <ul>
                         <li>Implementing a loading screen</li>
                         <li>Using Intersection Observer</li>
@@ -82,7 +93,7 @@
                     </ul>
                 </div>
                 <div class="message">
-                    <h2>Languages:</h2>
+                    <h3>Languages:</h3>
                     <div id="TimeWorkshopV2"></div>
                 </div>
             </div>
@@ -90,7 +101,7 @@
 
         <div class="project">
             <div class="left">
-                <img src="MEDIA/IMG/PROJECTS/rSlashWallpaper/live.png" class="card" loading="lazy">
+                <img src="MEDIA/IMG/PROJECTS/rSlashWallpaper.png" class="card" loading="lazy">
                 <div class="CTAs">
                     <a href="https://turq0ise.github.io/rSlashWallpaper" target="_blank">
                         <button><i class="fa-solid fa-eye"></i> View Live</button>
@@ -106,7 +117,7 @@
                     <p>A gallery of mostly desktop wallpapers based on the posts of users in the r/Wallpaper sub-reddit.</p>
                 </div>
                 <div class="message">
-                    <h2>Key Takeaways:</h2>
+                    <h3>Key Takeaways:</h3>
                     <ul>
                         <li>Handling API requests using the Fetch API</li>
                         <li>Adding Lazy Loading</li>
@@ -114,7 +125,7 @@
                     </ul>
                 </div>    
                 <div class="message">
-                    <h2>Languages:</h2>
+                    <h3>Languages:</h3>
                     <div id="rSlashWallpaper"></div>
                 </div>
             </div>
@@ -122,7 +133,7 @@
 
         <div class="project">
             <div class="left">
-                <img src="MEDIA/IMG/PROJECTS/GroupFivePortfolio/live.png" class="card" loading="lazy">
+                <img src="MEDIA/IMG/PROJECTS/GroupFivePortfolio.png" class="card" loading="lazy">
                 <div class="CTAs">
                     <a href="https://turq0ise.github.io/GroupFivePortfolio" target="_blank">
                         <button><i class="fa-solid fa-eye"></i> View Live</button>
@@ -138,7 +149,7 @@
                     <p>This is a grade 10 school project to document our activities for a specific subject.</p>
                 </div>
                 <div class="message">
-                    <h2>Key Takeaways:</h2>
+                    <h3>Key Takeaways:</h3>
                     <ul>
                         <li>Using breadcrumbs for better navigation</li>
                         <li>Adding a back to top button</li>
@@ -146,7 +157,7 @@
                     </ul>
                 </div>
                 <div class="message">
-                    <h2>Languages:</h2>
+                    <h3>Languages:</h3>
                     <div id="GroupFivePortfolio"></div>
                 </div>
             </div>
