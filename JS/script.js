@@ -8,7 +8,7 @@ async function fetchGithub() {
     const fetchJson = await fetchData.json()
 
     for(let i = 0; i < fetchJson.length; i++) {
-        if(fetchJson[i].name == "TimeWorkshopV2" || fetchJson[i].name == "rSlashWallpaper" || fetchJson[i].name == "GroupFivePortfolio") {
+        if(fetchJson[i].name == "TimeWorkshopV2" || fetchJson[i].name == "rSlashWallpaper" || fetchJson[i].name == "GroupFivePortfolio" || fetchJson[i].name == "PitiksRedesign") {
             repoNames.push(fetchJson[i].name)
             languageUrls.push(fetchJson[i].languages_url)
         }
